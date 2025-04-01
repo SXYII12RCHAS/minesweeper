@@ -1,6 +1,6 @@
 import { TBoard } from "../types";
 import { initGame } from "../utils";
-import { useState, useCallback, useEffect, use } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { revealEmptyCells } from "../utils";
 import { revealAllMines } from "../utils";
 import { checkGameWon } from "../utils";

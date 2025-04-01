@@ -95,8 +95,8 @@ export const revealEmptyCells = (Board: TBoard, rows: number, cols: number, row:
 }
 
 export const revealAllMines = (Board: TBoard, highlightWin? : boolean) => {
-    Board.forEach((row, i) => {
-        row.forEach((cell, j) => {
+    Board.forEach((row) => {
+        row.forEach((cell) => {
             if(cell.value === "mine"){
 
                 cell.isOpened = true

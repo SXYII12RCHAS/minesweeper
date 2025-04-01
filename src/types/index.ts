@@ -1,18 +1,41 @@
-import {LEVELS} from "../constants"
+import { LEVELS } from "../constants";
 
-type openedCell = {isOpened: true; isFlagged: false}
-type closedCell = {isopened: false; isFlagged: boolean}
-type mineCell = {value: "mine"; highlight?: "red" | "green"}
-type numberCell = { value: number}
-type emptyCell = { value: null; isFlagged: false; isOpened: false}
+type OpenedCell = {
+  isOpened: true;
+  isFlagged: false;
+};
 
-export type openedMineCell = openedCell & mineCell
-type closedMineCell = closedCell & mineCell
-export type openedNumberCell = openedCell & numberCell
-type closedNumberCell = closedCell & numberCell
+type ClosedCell = {
+  isOpened: false;
+  isFlagged: boolean;
+};
 
-export type gameCell = openedMineCell | closedMineCell | openedNumberCell | closedNumberCell | emptyCell
+type MineCell = {
+  value: "mine";
+  highlight?: "red" | "green";
+};
 
-export type TBoard = gameCell[][]
+type NumberCell = {
+  value: number;
+};
 
-export type Level = keyof typeof LEVELS
+export type OpenedMineCell = OpenedCell & MineCell;
+type ClosedMineCell = ClosedCell & MineCell;
+export type OpenedNumberCell = OpenedCell & NumberCell;
+type ClosedNumberCell = ClosedCell & NumberCell;
+
+type EmptyCell = {
+  value: null;
+  isFlagged: false;
+  isOpened: false;
+};
+
+export type gameCell =
+  | OpenedMineCell
+  | ClosedMineCell
+  | OpenedNumberCell
+  | ClosedNumberCell
+  | EmptyCell;
+
+export type TBoard = gameCell[][];
+export type Level = keyof typeof LEVELS;
