@@ -1,0 +1,167 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Game{
+  padding: .5rem 1.5rem;
+  background-color: var(--surface);
+  border-radius: 1rem;
+}
+
+.row{
+  display: flex;
+}
+
+.cell{
+  --cell-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--cell-size) * .75);
+  font-weight: bold;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid var(--cell-border-color);
+  user-select: none;
+  cursor: default;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cell.one {
+  color: var(--one);
+}
+
+.cell.two {
+  color: var(--two);
+}
+
+.cell.three {
+  color: var(--three);
+}
+
+.cell.four {
+  color: var(--four);
+}
+
+.cell.five {
+  color: var(--five);
+}
+
+.cell.six {
+  color: var(--six);
+}
+
+.cell.seven {
+  color: var(--seven);
+}
+
+.cell.eight {
+  color: var(--eight);
+}
+
+.cell img {
+  width: 75%;
+  height: 75%;
+}
+
+.cell.small {
+  --cell-size: 1.5rem;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-mid);
+  border-style: solid;
+  border-width: 2.25px;
+  border-top-color: var(--overlay-light);
+  border-left-color: var(--overlay-light);
+  border-bottom-color: var(--overlay-dark);
+  border-right-color: var(--overlay-dark);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: 3px 3px 8px #33333365;
+}
+
+.flag{
+  display: none;
+}
+
+.flag.flagged{
+  display: block;
+}
+
+.red{
+  background-color: var(--red);
+}
+
+.green{
+  background-color: var(--green);
+}
+
+.Levels{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+ button{
+  width: 100%;
+  display: flex;
+  padding: 0.25rem 1rem;
+  border: none;
+  justify-content: center;
+  border-radius: .25rem;
+  transition: background-color .2s ease-in-out;
+  text-transform: capitalize;
+  background-color: var(--btn-color);
+  color: var(--surface);
+  cursor: pointer;
+}
+
+.Levels button.Active{
+  background-color: var(--active-btn-color);
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.win{
+  color: var(--green)
+}
+
+.lose{
+  color: var(--red)
+}
+
+.headerIcon{
+  width: 1rem;
+  height: 1rem;
+}
+
+.headerLabel{
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.headerButtons{
+  display: flex;
+  gap: 1rem;
+}
